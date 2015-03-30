@@ -1,0 +1,21 @@
+{
+  "name": "clyons-eis/silverstripe-metadataobject",
+  "description": "Provide basic MetaData for custom DataObjects; declare default functions & override as needed",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/clyonsEIS/silverstripe-MetaDataObject",
+  "keywords": ["silverstripe", "meta", "metadata", "og", "opengraph"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {"name": "Craig Lyons","email": "clyons@execproinc.com"}
+  ],
+  "support": {
+    "issues": "https://github.com/clyonsEIS/silverstripe-MetaDataObject/issues"
+  },
+  "require": {
+    "silverstripe/cms": "~3.1",
+    "silverstripe/framework": "~3.1"
+  },
+  "extra": {
+    "installer-name": "silverstripe-metadataobject"
+  }
+}
