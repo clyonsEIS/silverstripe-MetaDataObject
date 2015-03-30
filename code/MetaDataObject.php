@@ -4,6 +4,7 @@ class MetaDataObject extends DataExtension {
 
 	private static $db = array(
 		'MetaTitle' => 'Varchar(255)',
+		'OGTitle' => 'Varchar(255)',
 		'MetaDescription' => 'Text',
 		'OGDescription' => 'Text',
 	);
@@ -16,6 +17,7 @@ class MetaDataObject extends DataExtension {
 	{
 		$fields->removeByName(array(
 			'MetaTitle',
+			'OGTitle',
 			'MetaDescription',
 			'OGDescription',
 			'OGImage'
@@ -27,6 +29,8 @@ class MetaDataObject extends DataExtension {
 				),
 				TextField::create('MetaTitle')
 					->setTitle('Meta Title'),
+				TextField::create('OGTitle')
+					->setTitle('OG Title'),
 				TextAreaField::create('MetaDescription')
 					->setTitle('Meta Description'),
 				TextAreaField::create('OGDescription')
@@ -42,6 +46,7 @@ class MetaDataObject extends DataExtension {
 	{
 		$textTypes = array(
 			'MetaTitle',
+			'OGTitle',
 			'MetaDescription',
 			'OGDescription'
 		);
@@ -62,6 +67,7 @@ class MetaDataObject extends DataExtension {
 
 	//Empty getter methods so these can be declared (or not) at will, rather than interface insistence
 	public function getDefaultMetaTitle(){}
+	public function getDefaultOGTitle(){}
 	public function getDefaultMetaDescription(){}
 	public function getDefaultOGDescription(){}
 	public function getDefaultOGImage(){}
