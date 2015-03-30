@@ -5,7 +5,7 @@
 
 ##Installation
 * Install to silverstripe root
-* `dev/build`
+* `dev/build?flush=1`
 
 ##Usage
 Apply the extension to your custom DataObject class.
