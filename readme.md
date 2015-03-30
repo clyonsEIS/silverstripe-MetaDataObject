@@ -15,7 +15,7 @@ CustomDataObject:
     - 'MetaDataObject'
 ```
 
-Optional - provide fallback methods for each of the available meta properties.  
+Optional - provide fallback methods for each of the available meta properties on each decorated custom DataObject:
 ```php
 	public function getDefaultMetaTitle()
 	{
@@ -35,7 +35,7 @@ Optional - provide fallback methods for each of the available meta properties.
 	}
 ```
 
-In your controller action, retrieve the meta data by calling DataObjectMeta on the item, i.e.
+In your controller action, retrieve the meta data by calling DataObjectMeta on the desired object of the custom class:
 ```php
 	public function view() {
 		$item = $this->getItem();
