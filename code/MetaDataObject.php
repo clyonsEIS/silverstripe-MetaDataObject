@@ -54,7 +54,10 @@ class MetaDataObject extends DataExtension {
 		$meta = array();
 		foreach($textTypes as $textType) {
 			$getter = "getDefault" . $textType;
-			$meta[$textType] = trim($this->owner->$textType) ? $this->owner->$textType : $this->owner->$getter();
+			$string = trim($this->owner->$textType) ? $this->owner->$textType : $this->owner->$getter();
+			$string = htmlspecialchars(trim(strip_tags($string)));
+			$string = strlen($string) > 160 ? preg_replace('/\s+?(\S+)?$/', '', substr($string, 0, 160)) : $string;
+			$meta[$textType] = $string;
 		}
 
 		if($this->owner->OGImage() && $this->owner->OGImage()->ID > 0) {
